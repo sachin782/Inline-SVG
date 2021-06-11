@@ -1,0 +1,52 @@
+Drawing Path and Shapes with SVG
+********************************
+
+1. Drawing a Line
+Line is the most basic path you can draw with SVG. The following example will show you how to create a straight line using the SVG <line> element:
+<svg width="300" height="200">
+    <line x1="50" y1="50" x2="250" y2="150" style="stroke:red; stroke-width:3;" />
+</svg>
+The attributes x1, x2, y1 and y2 of the <line> element draw a line from (x1,y1) to (x2,y2).
+
+
+2. Drawing a Rectangle
+<svg width="300" height="200">
+    <rect x="50" y="50" width="200" height="100" style="fill:orange; stroke:black; stroke-width:3;" />
+</svg>
+The attributes x and y of <rect> element defines the co-ordinates of the top-left corner of the rectangle. The attributes width and height specifies the width and height of the shape.
+
+
+3. Drawing a Circle
+<svg width="300" height="200">
+    <circle cx="150" cy="100" r="70" style="fill:lime; stroke:black; stroke-width:3;" />
+</svg>
+The attributes cx and cy of the <circle> element defines the co-ordinates of the center of the circle and the attribute r specifies the radius of the circle. If the attributes cx and cy are omitted or not specified, the center of the circle is set to (0,0).
+
+
+4. Drawing Text with SVG
+<svg width="300" height="200">
+    <text x="20" y="30" style="fill:purple; font-size:22px;">
+        Welcome to Our Website!
+    </text>
+    <text x="20" y="30" dx="0" dy="20" style="fill:navy; font-size:14px;">
+        Here you will find lots of useful information.
+    </text>
+</svg>
+The attributes x and y of the <text> element defines the location of the top-left corner in absolute terms whereas the attributes dx and dy specifies the relative location.
+
+
+
+You can also use the <tspan> element to reformat or reposition the span of text contained within a <text> element. 
+Text contained in separate tspans, but inside the same text element can all be selected at once — when you click and drag to select the text. 
+However the text in separate text elements can't be selected at the same time.
+
+<svg width="300" height="200">
+    <text x="30" y="15" style="fill:purple; font-size:22px; transform:rotate(30deg);">
+        <tspan style="fill:purple; font-size:22px;">
+            Welcome to Our Website!
+        </tspan>
+        <tspan dx="-230" dy="20" style="fill:navy; font-size:14px;">
+            Here you will find lots of useful information.
+        </tspan>
+    </text>
+</svg>
